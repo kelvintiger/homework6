@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Video Controls</title>
-	<script src = ""></script>
+	<script src = "js/video.js"></script>
 	<style>
 	video{
 		width: 90%;
@@ -19,7 +19,18 @@
 
 	/*Use CSS before property to display the image before the text in the buttons*/
 	
-</style>
+	/*Reference: https://css-tricks.com/css-content/*/
+	/*Reference:https://www.w3schools.com/cssref/pr_gen_content.asp*/
+	.play:before{
+
+		content:url(img/play.png);
+	}
+
+	.pause:before{
+		content:url(img/pause.png);
+	}
+
+	</style>
 </head>
 <body onload = "getVid()"> 
 <main>
