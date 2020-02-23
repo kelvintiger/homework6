@@ -7,6 +7,7 @@ function getVid(){
 function playVid() {
 
 	video.play();
+	document.getElementById("volume").innerHTML = video.volume/0.01 + "%";
 	console.log("Play Video");
 } 
 
@@ -57,18 +58,23 @@ function changeVolume() {
 	var v = document.getElementById("volumeSlider").value;
 
 	video.volume = (v*0.01);
+	document.getElementById("volume").innerHTML = v + "%";
+
 	console.log("Volume is "+ video.volume);
+
 }
        
 
 function gray() { 
 
-	video.style.filter = "grayscale(100%)";
+	// video.style.filter = "grayscale(100%)";
+	document.getElementById("myVideo").classList.add("grayscale");
 	console.log("In grayscale");
 }
 
 function color() {
 
-	video.style.filter = "grayscale(0%)";
+	// video.style.filter = "grayscale(0%)";
+	document.getElementById("myVideo").classList.remove("grayscale");
 	console.log("In color"); 
 }
