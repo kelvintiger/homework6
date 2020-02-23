@@ -29,7 +29,7 @@ function increaseSpeed() {
 
 function skipAhead() {
 
-	if (video.currentTime < 535){
+	if (video.currentTime < 535.8){
 		video.currentTime = (video.currentTime + 60);
 	} else {
 		video.currentTime = 0;
@@ -43,9 +43,11 @@ function mute() {
   
   if(video.muted == false){
   		video.muted = true;
+  		document.getElementById("mute").innerHTML = "Unmute";
   		console.log("Muted");
   	} else {
   		video.muted = false;
+  		document.getElementById("mute").innerHTML = "Mute";
   		console.log("Unmuted");
   	}
 }
