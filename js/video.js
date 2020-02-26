@@ -34,7 +34,7 @@ function skipAhead() {
 		video.currentTime = (video.currentTime + 60);
 	} else {
 		video.currentTime = 0;
-		video.playbackRate = 0;
+		video.playbackRate = 1;
 	}
 
 	console.log("Current location is "+ video.currentTime);
